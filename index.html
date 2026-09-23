@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Semáforo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Simulador de Semáforo</h1>
+
+        <div class="semaforo">
+            <!-- se crean los id para cada luz del semáforo y se les asigna la clase correspondiente-->
+            <div id="rojo" class="luz rojo"></div>
+            <div id="amarillo" class="luz amarillo"></div>
+            <div id="verde" class="luz verde"></div>
+        </div>
+
+        <p id="estado">Apagado</p>
+
+        <div class="botones">
+            <button onclick="cambiarColor('rojo')">Rojo</button>
+            <button onclick="cambiarColor('amarillo')">Amarillo</button>
+            <button onclick="cambiarColor('verde')">Verde</button>
+            <button onclick="automatico()">Automático</button>
+            <button onclick="apagar()">Apagar</button>
+        </div>
+
+        <div class="contador">
+            <h2>Veces encendido</h2>
+            <!-- usamos span para mostrar el contador de cada color, inicialmente en -->
+            <p>Rojo: <span id="contadorRojo">0</span></p>
+            <p>Amarillo: <span id="contadorAmarillo">0</span></p>
+            <p>Verde: <span id="contadorVerde">0</span></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
